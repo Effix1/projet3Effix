@@ -1,0 +1,53 @@
+@import "./utils/mixin.scss";
+@import "./base/base.scss";
+@import "./layouts/header.scss";
+@import "./utils/variables.scss";
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.location {
+    background-color: #eaeaea;
+    padding: 20px ;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    & i {
+      position: relative;
+      right: 20px;
+    }
+
+    & p {
+        margin: 0;
+    
+    }
+}
+
+
+.haut-de-page {
+    text-align: center;
+    background-color: #f6f6f6;
+    & h3 { 
+        margin: 0;  
+        padding: 35px 0 0 0;
+        font-size:2rem;
+    }
+    & p {   
+        font-weight: 300;
+        font-size: 1.5rem;
+    }    
+    & button {
+        background-image: linear-gradient($secondaire, $primaire);
+        border: none;
+        border-radius: 2rem;
+        padding: 19px;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+}
