@@ -31,15 +31,17 @@ body {
 
 .haut-de-page {
     text-align: center;
-    background-color: #f6f6f6;
+    background-color: $back-color;
+    padding-bottom: 80px;
     & h3 { 
         margin: 0;  
         padding: 35px 0 0 0;
         font-size:2rem;
     }
     & p {   
-        font-weight: 300;
-        font-size: 1.5rem;
+        font-weight: 100;
+        font-size: 1.3rem;
+        color: #525252;
     }    
     & button {
         @include shadow;
@@ -51,4 +53,61 @@ body {
         font-size: 1.5rem;
         font-weight: 600;
     }
+}
+.nav__title {
+    font-size: 2rem;
+}
+
+nav {
+    counter-reset: choice;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    & .nav__pic{
+        width: 80vh;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    & li{
+        position: relative;
+        list-style-type: none;
+        @include shadow;
+        background-color: $back-color;
+        padding: 25px 0;
+        border-radius: 15px;
+        font-weight: 600;
+
+        & .fas-picture {
+        color: grey;
+        font-size: 25px;
+        position: relative;
+        left: -100px;
+        }
+        .fa-mobile-screen-button{
+            left: -90px;
+        }
+        .fa-store {
+            left: -95px;
+        }
+        &::before{
+            position: absolute;
+            left: -10px;
+            top: 25px;
+            display: block;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            content: counter(choice);
+            counter-increment: choice ;
+            background-color: $primaire;
+            color: white;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+
+        }    
+    }
+    
 }
