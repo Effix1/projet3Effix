@@ -42,6 +42,7 @@ body {
         font-size: 1.5rem;
     }    
     & button {
+        @include shadow;
         background-image: linear-gradient($secondaire, $primaire);
         border: none;
         border-radius: 2rem;
