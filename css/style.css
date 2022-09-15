@@ -62,48 +62,51 @@ body {
   font-weight: 600;
 }
 
-.nav__title {
-  font-size: 2rem;
-}
-
-nav {
+.fonction {
   counter-reset: choice;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-nav .nav__pic {
-  width: 80vh;
+.fonction .fonction__title {
+  font-size: 2rem;
+  text-align: left;
+}
+.fonction .nav__pic {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 25px;
+  padding: 0;
 }
-nav li {
+.fonction li {
+  width: 50vh;
   position: relative;
   list-style-type: none;
   box-shadow: 0px 5px 5px #cfcfcf;
   background-color: #f6f6f6;
-  padding: 25px 0;
+  padding: 25px 0 25px 80px;
   border-radius: 15px;
   font-weight: 600;
+  font-size: 0.9rem;
+  text-align: left;
 }
-nav li .fas-picture {
+.fonction li .fas-picture {
   color: grey;
-  font-size: 25px;
-  position: relative;
-  left: -100px;
+  font-size: 1.3rem;
+  position: absolute;
+  left: 40px;
+  top: 22px;
 }
-nav li .fa-mobile-screen-button {
-  left: -90px;
+.fonction li .fa-mobile-screen-button {
+  left: 44px;
 }
-nav li .fa-store {
-  left: -95px;
-}
-nav li::before {
+.fonction li::before {
   position: absolute;
   left: -10px;
-  top: 25px;
-  display: block;
+  top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;

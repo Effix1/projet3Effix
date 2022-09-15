@@ -54,48 +54,58 @@ body {
         font-weight: 600;
     }
 }
-.nav__title {
-    font-size: 2rem;
-}
 
-nav {
+.fonction {
     counter-reset: choice;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    & .fonction__title {
+        font-size: 2rem;
+        text-align: left;
+    }
     & .nav__pic{
-        width: 80vh;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 25px;
+        padding: 0;
     }
     
     & li{
+        width: 50vh;
         position: relative;
         list-style-type: none;
         @include shadow;
         background-color: $back-color;
-        padding: 25px 0;
+        padding: 25px 0 25px 80px;
         border-radius: 15px;
         font-weight: 600;
+        font-size: 0.9rem;
+        text-align: left;
+
 
         & .fas-picture {
         color: grey;
-        font-size: 25px;
-        position: relative;
-        left: -100px;
+        font-size: 1.3rem;
+        position: absolute;
+        left: 40px;
+        top: 22px;
+        
         }
         .fa-mobile-screen-button{
-            left: -90px;
+            left: 44px;
+           
         }
-        .fa-store {
-            left: -95px;
-        }
+        
         &::before{
             position: absolute;
             left: -10px;
-            top: 25px;
-            display: block;
+            top: 20px;
+
             display:flex;
             align-items: center;
             justify-content: center;
