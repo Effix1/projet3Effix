@@ -24,6 +24,7 @@ body {
 
     & p {
         margin: 0;
+        font-weight: 700;
     
     }
 }
@@ -32,26 +33,27 @@ body {
 .haut-de-page {
     text-align: center;
     background-color: $back-color;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     & h3 { 
         margin: 0;  
         padding: 35px 0 0 0;
-        font-size:2rem;
+        @include police__h3;
     }
     & p {   
         font-weight: 100;
-        font-size: 1.3rem;
+        font-size: 1rem;
         color: #525252;
+        margin-bottom: 30px
     }    
     & button {
         @include shadow;
         background-image: linear-gradient($secondaire, $primaire);
         border: none;
         border-radius: 2rem;
-        padding: 19px;
+        padding: 15px;
         color: white;
-        font-size: 1.5rem;
-        font-weight: 600;
+        font-size: 0.9rem;
+        font-weight: 300;
     }
 }
 
@@ -65,7 +67,10 @@ body {
 
     & .fonction__title {
         font-size: 2rem;
+        width: 50vh;
         text-align: left;
+        @include police__h3;
+        margin:35px 0 15px 0;
     }
     & .nav__pic{
         display: flex;

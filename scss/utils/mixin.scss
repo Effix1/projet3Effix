@@ -1,3 +1,7 @@
 @mixin shadow {
     box-shadow: 0px 5px 5px #cfcfcf;
 }
+@mixin police__h3 {
+    font-weight: 700, bolder;
+    font-size: 1.4rem;
+}
