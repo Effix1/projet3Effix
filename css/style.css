@@ -72,6 +72,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 60px;
 }
 .fonction .fonction__title {
   font-size: 2rem;
@@ -129,7 +130,7 @@ body {
 .set__card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
   background-color: #f6f6f6;
 }
@@ -137,22 +138,38 @@ body {
   font-weight: 700, bolder;
   font-size: 1.4rem;
   width: 50vh;
+  margin-bottom: 12.4px;
 }
 .set__card .card {
-  border: 1px solid;
+  border-radius: 20px;
   width: 50vh;
-  height: 170px;
+  height: 250px;
+  box-shadow: 0px 5px 5px #cfcfcf;
+  overflow: hidden;
 }
 .set__card .card img {
   object-fit: cover;
-  width: 49.8vh;
-  height: 120px;
+  width: 50vh;
+  height: 139px;
 }
 .set__card .legend__card {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  padding-left: 15px;
 }
-.set__card .legend__card p {
+.set__card .legend__card .card__name {
+  margin: 5px 0 5px 0;
+  min-width: max-content;
+}
+.set__card .legend__card .card__location {
   margin: 0;
+}
+.set__card .legend__card .fa-regular {
+  position: relative;
+  left: 280px;
+  bottom: 20px;
+  background-color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */

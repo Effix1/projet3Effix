@@ -1,0 +1,18 @@
+.location {
+    background-color: #eaeaea;
+    padding: 20px ;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    & i {
+      position: relative;
+      right: 20px;
+    }
+
+    & p {
+        margin: 0;
+        font-weight: 700;
+    
+    }
+}

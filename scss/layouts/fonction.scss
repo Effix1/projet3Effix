@@ -1,0 +1,70 @@
+.fonction {
+    counter-reset: choice;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+
+    & .fonction__title {
+        font-size: 2rem;
+        width: 50vh;
+        text-align: left;
+        @include police__h3;
+        margin:35px 0 15px 0;
+    }
+    & .fonction__pic{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        padding: 0;
+    }
+    
+    & li{
+        width: 50vh;
+        position: relative;
+        list-style-type: none;
+        @include shadow;
+        background-color: $back-color;
+        padding: 25px 0 25px 80px;
+        border-radius: 15px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-align: left;
+
+
+        & .fas-picture {
+        color: grey;
+        font-size: 1.3rem;
+        position: absolute;
+        left: 40px;
+        top: 22px;
+        
+        }
+        .fa-mobile-screen-button{
+            left: 44px;
+           
+        }
+        
+        &::before{
+            position: absolute;
+            left: -10px;
+            top: 20px;
+
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            content: counter(choice);
+            counter-increment: choice ;
+            background-color: $primaire;
+            color: white;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+
+        }    
+    }
+    
+}

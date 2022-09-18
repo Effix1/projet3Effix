@@ -1,156 +1,56 @@
-@import "./utils/mixin.scss";
 @import "./base/base.scss";
-@import "./layouts/header.scss";
+@import "./utils/mixin.scss";
 @import "./utils/variables.scss";
-
-body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.location {
-    background-color: #eaeaea;
-    padding: 20px ;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-
-    & i {
-      position: relative;
-      right: 20px;
-    }
-
-    & p {
-        margin: 0;
-        font-weight: 700;
-    
-    }
-}
+@import "./layouts/header.scss";
+@import "./layouts/body.scss";
+@import "./layouts/location.scss";
+@import "./layouts/haut-de-page.scss";
+@import "./layouts/fonction.scss";
 
 
-.haut-de-page {
-    text-align: center;
-    background-color: $back-color;
-    padding-bottom: 60px;
-    & h3 { 
-        margin: 0;  
-        padding: 35px 0 0 0;
-        @include police__h3;
-    }
-    & p {   
-        font-weight: 100;
-        font-size: 1rem;
-        color: #525252;
-        margin-bottom: 30px
-    }    
-    & button {
-        @include shadow;
-        background-image: linear-gradient($secondaire, $primaire);
-        border: none;
-        border-radius: 2rem;
-        padding: 15px;
-        color: white;
-        font-size: 0.9rem;
-        font-weight: 300;
-    }
-}
 
-.fonction {
-    counter-reset: choice;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    & .fonction__title {
-        font-size: 2rem;
-        width: 50vh;
-        text-align: left;
-        @include police__h3;
-        margin:35px 0 15px 0;
-    }
-    & .fonction__pic{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 25px;
-        padding: 0;
-    }
-    
-    & li{
-        width: 50vh;
-        position: relative;
-        list-style-type: none;
-        @include shadow;
-        background-color: $back-color;
-        padding: 25px 0 25px 80px;
-        border-radius: 15px;
-        font-weight: 600;
-        font-size: 0.9rem;
-        text-align: left;
-
-
-        & .fas-picture {
-        color: grey;
-        font-size: 1.3rem;
-        position: absolute;
-        left: 40px;
-        top: 22px;
-        
-        }
-        .fa-mobile-screen-button{
-            left: 44px;
-           
-        }
-        
-        &::before{
-            position: absolute;
-            left: -10px;
-            top: 20px;
-
-            display:flex;
-            align-items: center;
-            justify-content: center;
-            content: counter(choice);
-            counter-increment: choice ;
-            background-color: $primaire;
-            color: white;
-            height: 24px;
-            width: 24px;
-            border-radius: 50%;
-
-        }    
-    }
-    
-}
 .set__card {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
     background-color: $back-color;
     & h3 {
         @include police__h3;
         width: 50vh;
+        margin-bottom:12.4px;
     }
     & .card {
-        border: 1px solid;
+        border-radius: 20px;
         width: 50vh;
-        height: 170px;
-        
+        height: 250px;
+        @include shadow;
+        overflow: hidden;
     }
     & .card img {
         object-fit: cover;
-        width: 49.8vh;
-        height: 120px;
+        width: 50vh;
+        height: 139px;
     }
     & .legend__card {
-        text-align: center;
-        & p {
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        padding-left: 15px;
+        
+        & .card__name {
+            margin: 5px 0 5px 0;
+            min-width: max-content;
+            
+        }
+        & .card__location {
             margin: 0;
+        }
+        & .fa-regular {
+           position: relative;
+           left: 280px;
+           bottom: 20px;
+           background-color: blue;
         }
     }
 }
