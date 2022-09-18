@@ -81,7 +81,7 @@ body {
   font-size: 1.4rem;
   margin: 35px 0 15px 0;
 }
-.fonction .nav__pic {
+.fonction .fonction__pic {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -121,9 +121,38 @@ body {
   counter-increment: choice;
   background-color: #9356DC;
   color: white;
-  height: 30px;
-  width: 30px;
+  height: 24px;
+  width: 24px;
   border-radius: 50%;
+}
+
+.set__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+.set__card h3 {
+  font-weight: 700, bolder;
+  font-size: 1.4rem;
+  width: 50vh;
+}
+.set__card .card {
+  border: 1px solid;
+  width: 50vh;
+  height: 170px;
+}
+.set__card .card img {
+  object-fit: cover;
+  width: 49.8vh;
+  height: 120px;
+}
+.set__card .legend__card {
+  text-align: center;
+}
+.set__card .legend__card p {
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

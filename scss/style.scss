@@ -72,7 +72,7 @@ body {
         @include police__h3;
         margin:35px 0 15px 0;
     }
-    & .nav__pic{
+    & .fonction__pic{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -118,11 +118,39 @@ body {
             counter-increment: choice ;
             background-color: $primaire;
             color: white;
-            height: 30px;
-            width: 30px;
+            height: 24px;
+            width: 24px;
             border-radius: 50%;
 
         }    
     }
     
+}
+.set__card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: $back-color;
+    & h3 {
+        @include police__h3;
+        width: 50vh;
+    }
+    & .card {
+        border: 1px solid;
+        width: 50vh;
+        height: 170px;
+        
+    }
+    & .card img {
+        object-fit: cover;
+        width: 49.8vh;
+        height: 120px;
+    }
+    & .legend__card {
+        text-align: center;
+        & p {
+            margin: 0;
+        }
+    }
 }
