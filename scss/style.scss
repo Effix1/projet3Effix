@@ -12,7 +12,7 @@
 .set__card {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
     background-color: $back-color;
     & h3 {
@@ -27,30 +27,46 @@
         @include shadow;
         overflow: hidden;
     }
-    & .card img {
-        object-fit: cover;
-        width: 50vh;
-        height: 139px;
+    & .card__img--lpg {
+        @include card__mobil;
+        object-position: -0px -40px;
     }
-    & .legend__card {
+    & .card__img--lne {
+        @include card__mobil;
+        object-position: 0px -140px;
+    }
+    & .card__img--alf {
+        @include card__mobil;
+        object-position: 0px -30px;
+    }  
+    & .card__img--lds {
+        @include card__mobil;
+        object-position: 0px -50px;
+    } 
+        
+    
+    & .card__legend {
         display: flex;
         flex-direction: column;
-        background-color: red;
         padding-left: 15px;
+        position: relative;
         
-        & .card__name {
-            margin: 5px 0 5px 0;
+        & .legend__name {
+            margin: 15px 0 5px 0;
             min-width: max-content;
-            
+            font-weight: 700;
+            font-size: 1.1rem;
         }
-        & .card__location {
+        & .legend__location {
             margin: 0;
+            font-weight: 300;
         }
         & .fa-regular {
-           position: relative;
-           left: 280px;
-           bottom: 20px;
-           background-color: blue;
+           position: absolute;
+           right: 20px;
+           bottom: 9px;
+           font-size: 1.6rem;
         }
+        
     }
 }

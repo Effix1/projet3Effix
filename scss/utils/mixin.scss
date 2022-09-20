@@ -5,3 +5,8 @@
     font-weight: 700, bolder;
     font-size: 1.4rem;
 }
+@mixin card__mobil {
+    object-fit: cover;
+    width: 50vh;
+    height: 174px;
+}

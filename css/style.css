@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2? family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -49,7 +50,7 @@ body {
   font-size: 1.4rem;
 }
 .haut-de-page p {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1rem;
   color: #525252;
   margin-bottom: 30px;
@@ -130,7 +131,7 @@ body {
 .set__card {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
   background-color: #f6f6f6;
 }
@@ -147,29 +148,51 @@ body {
   box-shadow: 0px 5px 5px #cfcfcf;
   overflow: hidden;
 }
-.set__card .card img {
+.set__card .card__img--lpg {
   object-fit: cover;
   width: 50vh;
-  height: 139px;
+  height: 174px;
+  object-position: 0px -40px;
 }
-.set__card .legend__card {
+.set__card .card__img--lne {
+  object-fit: cover;
+  width: 50vh;
+  height: 174px;
+  object-position: 0px -140px;
+}
+.set__card .card__img--alf {
+  object-fit: cover;
+  width: 50vh;
+  height: 174px;
+  object-position: 0px -30px;
+}
+.set__card .card__img--lds {
+  object-fit: cover;
+  width: 50vh;
+  height: 174px;
+  object-position: 0px -50px;
+}
+.set__card .card__legend {
   display: flex;
   flex-direction: column;
-  background-color: red;
   padding-left: 15px;
-}
-.set__card .legend__card .card__name {
-  margin: 5px 0 5px 0;
-  min-width: max-content;
-}
-.set__card .legend__card .card__location {
-  margin: 0;
-}
-.set__card .legend__card .fa-regular {
   position: relative;
-  left: 280px;
-  bottom: 20px;
-  background-color: blue;
+}
+.set__card .card__legend .legend__name {
+  margin: 15px 0 5px 0;
+  min-width: max-content;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.set__card .card__legend .legend__location {
+  margin: 0;
+  font-weight: 300;
+}
+.set__card .card__legend .fa-regular {
+  position: absolute;
+  right: 20px;
+  bottom: 9px;
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
