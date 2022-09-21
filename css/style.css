@@ -134,6 +134,7 @@ body {
   gap: 20px;
   align-items: center;
   background-color: #f6f6f6;
+  padding-bottom: 65px;
 }
 .set__card h3 {
   font-weight: 700, bolder;
@@ -188,11 +189,53 @@ body {
   margin: 0;
   font-weight: 300;
 }
-.set__card .card__legend .fa-regular {
+.set__card .card__legend .fa-regular, .set__card .card__legend .fa-solid {
   position: absolute;
   right: 20px;
   bottom: 9px;
   font-size: 1.6rem;
+}
+.set__card .card__legend .fa-solid {
+  font-size: 1.62rem;
+  opacity: 0;
+  color: red;
+  transform: scale(1);
+}
+
+footer {
+  background-color: #353535;
+}
+
+.foot {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 50vh;
+}
+.foot .foot__title {
+  align-self: flex-start;
+  letter-spacing: 1px;
+  padding-top: 25px;
+  margin: 0;
+  font-family: "shrikhand", cursive;
+  color: white;
+  justify-content: flex-end;
+}
+.foot .foot__nav {
+  list-style: none;
+  padding: 0;
+}
+.foot .foot__nav .nav__link {
+  text-decoration: none;
+  color: white;
+}
+.foot .foot__nav .fa-utensils {
+  font-size: 0.9rem;
+  padding-right: 13px;
+}
+.foot .foot__nav .fa-handshake-angle {
+  font-size: 0.8rem;
+  padding-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
