@@ -204,6 +204,8 @@ body {
 
 footer {
   background-color: #353535;
+  display: flex;
+  justify-content: center;
 }
 
 .foot {

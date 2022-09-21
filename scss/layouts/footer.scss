@@ -1,0 +1,36 @@
+footer {
+    background-color: #353535;
+    display: flex;
+    justify-content: center;
+}
+.foot {
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    & .foot__title {
+        align-self: flex-start;
+        letter-spacing: 1px;
+        padding-top: 25px;
+        margin: 0;
+        font-family: 'shrikhand' , cursive;
+        color: white;
+        justify-content: flex-end; 
+    }
+    & .foot__nav {
+        list-style: none;
+        padding: 0;
+        & .nav__link {
+            text-decoration: none;
+            color: white;
+        }
+        & .fa-utensils {
+            font-size: 0.9rem;
+            padding-right: 13px;
+        }
+        & .fa-handshake-angle {
+            font-size: 0.8rem;
+            padding-right: 10px;
+        }
+    }
+}
