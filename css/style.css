@@ -18,6 +18,7 @@ header h1 {
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
@@ -68,17 +69,16 @@ body {
 
 .fonction {
   counter-reset: choice;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 60px;
+  width: 100%;
 }
 .fonction .fonction__title {
+  display: inline;
   font-size: 2rem;
-  width: 50vh;
-  text-align: left;
+  width: 80%;
   font-weight: 700, bolder;
   font-size: 1.4rem;
   margin: 35px 0 15px 0;
@@ -89,9 +89,9 @@ body {
   justify-content: center;
   gap: 25px;
   padding: 0;
+  width: 80%;
 }
 .fonction li {
-  width: 50vh;
   position: relative;
   list-style-type: none;
   box-shadow: 0px 5px 5px #cfcfcf;
@@ -100,7 +100,7 @@ body {
   border-radius: 15px;
   font-weight: 600;
   font-size: 0.9rem;
-  text-align: left;
+  text-align: center;
 }
 .fonction li .fas-picture {
   color: grey;
@@ -129,77 +129,55 @@ body {
 }
 
 .set__card {
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
-  background-color: #f6f6f6;
-  padding-bottom: 65px;
+  gap: 20px;
+  text-align: left;
 }
 .set__card h3 {
-  font-weight: 700, bolder;
-  font-size: 1.4rem;
-  width: 50vh;
-  margin-bottom: 12.4px;
+  width: 80%;
 }
-.set__card .card {
-  border-radius: 20px;
-  width: 50vh;
-  height: 250px;
-  box-shadow: 0px 5px 5px #cfcfcf;
-  overflow: hidden;
+
+.card {
+  position: relative;
+  border: 1px solid;
+  width: 80%;
 }
-.set__card .card__img--lpg {
+.card .card__img {
   object-fit: cover;
-  width: 50vh;
-  height: 174px;
-  object-position: 0px -40px;
+  height: 160px;
+  width: 100%;
 }
-.set__card .card__img--lne {
-  object-fit: cover;
-  width: 50vh;
-  height: 174px;
-  object-position: 0px -140px;
-}
-.set__card .card__img--alf {
-  object-fit: cover;
-  width: 50vh;
-  height: 174px;
-  object-position: 0px -30px;
-}
-.set__card .card__img--lds {
-  object-fit: cover;
-  width: 50vh;
-  height: 174px;
-  object-position: 0px -50px;
-}
-.set__card .card__legend {
+.card .card__legend {
   display: flex;
   flex-direction: column;
-  padding-left: 15px;
-  position: relative;
 }
-.set__card .card__legend .legend__name {
-  margin: 15px 0 5px 0;
-  min-width: max-content;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-.set__card .card__legend .legend__location {
-  margin: 0;
-  font-weight: 300;
-}
-.set__card .card__legend .fa-regular, .set__card .card__legend .fa-solid {
+.card .card__legend .fa-heart {
   position: absolute;
-  right: 20px;
-  bottom: 9px;
-  font-size: 1.6rem;
+  bottom: 18px;
+  right: 10px;
+  font-size: 1.4rem;
 }
-.set__card .card__legend .fa-solid {
-  font-size: 1.62rem;
+.card .card__legend .fa-solid {
   opacity: 0;
-  color: red;
-  transform: scale(1);
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: scale(0.4);
+  transition: transform, 0.5s;
+}
+.card .card__legend .fa-solid:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.card .card__legend .legend__name, .card .card__legend .legend__location {
+  margin: 10px 0 5px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 footer {

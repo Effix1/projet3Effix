@@ -1,16 +1,17 @@
 .fonction {
     counter-reset: choice;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 60px;
+    
+    width: 100%;
 
     & .fonction__title {
+        display: inline;
         font-size: 2rem;
-        width: 50vh;
-        text-align: left;
+        width: 80%;
+        
         @include police__h3;
         margin:35px 0 15px 0;
     }
@@ -20,10 +21,9 @@
         justify-content: center;
         gap: 25px;
         padding: 0;
+        width: 80%;
     }
-    
-    & li{
-        width: 50vh;
+    & li{ 
         position: relative;
         list-style-type: none;
         @include shadow;
@@ -32,27 +32,21 @@
         border-radius: 15px;
         font-weight: 600;
         font-size: 0.9rem;
-        text-align: left;
-
-
+        text-align: center;
         & .fas-picture {
         color: grey;
         font-size: 1.3rem;
         position: absolute;
         left: 40px;
         top: 22px;
-        
         }
         .fa-mobile-screen-button{
             left: 44px;
-           
         }
-        
         &::before{
             position: absolute;
             left: -10px;
             top: 20px;
-
             display:flex;
             align-items: center;
             justify-content: center;

@@ -1,68 +1,54 @@
 .set__card {
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
-    background-color: $back-color;
-    padding-bottom: 65px;
+    gap: 20px;
+    text-align: left;
     & h3 {
-        @include police__h3;
-        width: 50vh;
-        margin-bottom:12.4px;
-    }
-    & .card {
-        border-radius: 20px;
-        width: 50vh;
-        height: 250px;
-        @include shadow;
-        overflow: hidden;
-    }
-    & .card__img--lpg {
-        @include card__mobil;
-        object-position: -0px -40px;
-    }
-    & .card__img--lne {
-        @include card__mobil;
-        object-position: 0px -140px;
-    }
-    & .card__img--alf {
-        @include card__mobil;
-        object-position: 0px -30px;
-    }  
-    & .card__img--lds {
-        @include card__mobil;
-        object-position: 0px -50px;
-    } 
-        
-    
-    & .card__legend {
-        display: flex;
-        flex-direction: column;
-        padding-left: 15px;
-        position: relative;
-        
-        & .legend__name {
-            margin: 15px 0 5px 0;
-            min-width: max-content;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-        & .legend__location {
-            margin: 0;
-            font-weight: 300;
-        }
-        & .fa-regular, .fa-solid  {
-           position: absolute;
-           right: 20px;
-           bottom: 9px;
-           font-size: 1.6rem;
-        }
-        & .fa-solid {
-            font-size: 1.62rem;
-            opacity: 0;
-            color: red;
-            transform: scale(1);
-        }
-        
+        width: 80%;
     }
 }
+.card {
+    position: relative;
+    border: 1px solid;
+    width: 80%;
+    
+    
+    & .card__img {
+        object-fit: cover;
+        height: 160px;
+        width: 100%;
+    }
+    & .card__legend {
+        
+        display: flex;
+        flex-direction: column;
+        & .fa-heart {
+            position: absolute;
+            bottom: 18px;
+            right: 10px;
+            font-size: 1.4rem;
+        }
+        & .fa-solid {
+            opacity: 0;
+            background-image: linear-gradient($primaire, $secondaire);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            transform: scale(0.4);
+            transition: transform, .5s;
+            &:hover {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+        & .legend__name, .legend__location  {
+            margin: 10px 0 5px;
+            padding-left: 10px;
+            display: flex;
+            justify-content: flex-start;
+        }
+     }
+ }
+  

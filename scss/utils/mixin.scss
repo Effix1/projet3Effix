@@ -6,7 +6,6 @@
     font-size: 1.4rem;
 }
 @mixin card__mobil {
-    object-fit: cover;
-    width: 50vh;
-    height: 174px;
+    object-fit: contain;
+   
 }
