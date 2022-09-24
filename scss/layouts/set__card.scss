@@ -1,4 +1,5 @@
 .set__card {
+    position: relative;
     background-color: $back-color;
     display: flex;
     flex-direction: column;
@@ -11,6 +12,16 @@
         @include police__h3;
         margin:22.4px 0px 0px;
     }
+    & .new::before {
+        padding: 5px;
+        content: "Nouveau";
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background-color: $tertiaire;
+        color: darken($tertiaire, 50%);
+        border-radius: 4px;
+    }
 }
 .card {
     position: relative;
@@ -18,14 +29,7 @@
     border-radius: 2rem;
     overflow: hidden;
     @include shadow;
-    &::before {
-        position: absolute;
-        content: 1;
-        height: 10px;
-        width: 10px;
-        border: 1px solid white;
-        background-color: red;
-    }
+   
     
     & .card__img {
         object-fit: cover;
@@ -44,20 +48,23 @@
             font-size: 1.4rem;
         }
         & .fa-solid {
+            padding: 10px;
             opacity: 0;
+            bottom: 15px;
+            right: 0.5px;
             background-image: linear-gradient($primaire, $secondaire);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            transform: scale(0.7);
-            transition: transform, 1s;
+            transform: scale(0.5);
+            transition: transform, .4s;
             &:hover {
                 transform: scale(1.1);
                 opacity: 1;
             }
         }
         & .fa-regular {
-            transform: scale(1);
+            transform: scale(.89);
             transition: transform 4s;
             &:hover {
                 transform: scale(0);

@@ -92,7 +92,7 @@ body {
   padding: 0;
   width: 80%;
 }
-.fonction li {
+.fonction .fonction__pic__list {
   position: relative;
   list-style-type: none;
   box-shadow: 0px 5px 5px #cfcfcf;
@@ -103,17 +103,23 @@ body {
   font-size: 0.9rem;
   text-align: center;
 }
-.fonction li .fas-picture {
+.fonction .fonction__pic__list .fas-picture {
   color: grey;
   font-size: 1.3rem;
   position: absolute;
   left: 40px;
   top: 22px;
 }
-.fonction li .fa-mobile-screen-button {
+.fonction .fonction__pic__list:hover {
+  background-color: #f2eafb;
+}
+.fonction .fonction__pic__list:hover .fas-picture {
+  color: #9356DC;
+}
+.fonction .fonction__pic__list .fa-mobile-screen-button {
   left: 44px;
 }
-.fonction li::before {
+.fonction .fonction__pic__list::before {
   position: absolute;
   left: -10px;
   top: 20px;
@@ -130,6 +136,7 @@ body {
 }
 
 .set__card {
+  position: relative;
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
@@ -144,6 +151,16 @@ body {
   font-size: 1.4rem;
   margin: 22.4px 0px 0px;
 }
+.set__card .new::before {
+  padding: 5px;
+  content: "Nouveau";
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: #99E2D0;
+  color: #1b6150;
+  border-radius: 4px;
+}
 
 .card {
   position: relative;
@@ -151,14 +168,6 @@ body {
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: 0px 5px 5px #cfcfcf;
-}
-.card::before {
-  position: absolute;
-  content: 1;
-  height: 10px;
-  width: 10px;
-  border: 1px solid white;
-  background-color: red;
 }
 .card .card__img {
   object-fit: cover;
@@ -177,20 +186,23 @@ body {
   font-size: 1.4rem;
 }
 .card .card__legend .fa-solid {
+  padding: 10px;
   opacity: 0;
+  bottom: 15px;
+  right: 0.5px;
   background-image: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transform: scale(0.7);
-  transition: transform, 1s;
+  transform: scale(0.5);
+  transition: transform, 0.4s;
 }
 .card .card__legend .fa-solid:hover {
   transform: scale(1.1);
   opacity: 1;
 }
 .card .card__legend .fa-regular {
-  transform: scale(1);
+  transform: scale(0.89);
   transition: transform 4s;
 }
 .card .card__legend .fa-regular:hover {

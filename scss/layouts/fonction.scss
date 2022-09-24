@@ -23,7 +23,7 @@
         padding: 0;
         width: 80%;
     }
-    & li{ 
+    & .fonction__pic__list { 
         position: relative;
         list-style-type: none;
         @include shadow;
@@ -39,6 +39,12 @@
         position: absolute;
         left: 40px;
         top: 22px;
+        }
+        &:hover {
+            background-color: lighten($primaire, 35%);
+            & .fas-picture {
+                color: $primaire;
+            }
         }
         .fa-mobile-screen-button{
             left: 44px;
