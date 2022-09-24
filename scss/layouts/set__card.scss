@@ -1,32 +1,45 @@
 .set__card {
-    border: 1px solid black;
+    background-color: $back-color;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     text-align: left;
+    padding: 20px 0 75px;
     & h3 {
         width: 80%;
+        @include police__h3;
+        margin:22.4px 0px 0px;
     }
 }
 .card {
     position: relative;
-    border: 1px solid;
     width: 80%;
-    
+    border-radius: 2rem;
+    overflow: hidden;
+    @include shadow;
+    &::before {
+        position: absolute;
+        content: 1;
+        height: 10px;
+        width: 10px;
+        border: 1px solid white;
+        background-color: red;
+    }
     
     & .card__img {
         object-fit: cover;
-        height: 160px;
+        height: 175px;
         width: 100%;
     }
     & .card__legend {
         
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         & .fa-heart {
             position: absolute;
-            bottom: 18px;
+            bottom: 25px;
             right: 10px;
             font-size: 1.4rem;
         }
@@ -36,18 +49,34 @@
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            transform: scale(0.4);
-            transition: transform, .5s;
+            transform: scale(0.7);
+            transition: transform, 1s;
             &:hover {
                 transform: scale(1.1);
                 opacity: 1;
             }
         }
+        & .fa-regular {
+            transform: scale(1);
+            transition: transform 4s;
+            &:hover {
+                transform: scale(0);
+            }
+        }
         & .legend__name, .legend__location  {
-            margin: 10px 0 5px;
             padding-left: 10px;
             display: flex;
             justify-content: flex-start;
+        }
+        & .legend__name {
+            margin: 0;
+            padding: 10px 0 5px 10px;
+            font-weight: 600;
+        }
+        & .legend__location {
+            font-weight: 300;
+            margin: 0;
+            padding-bottom: 13px;
         }
      }
  }
