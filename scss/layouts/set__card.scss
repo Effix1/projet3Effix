@@ -29,15 +29,12 @@
     border-radius: 2rem;
     overflow: hidden;
     @include shadow;
-   
-    
     & .card__img {
         object-fit: cover;
         height: 175px;
         width: 100%;
     }
     & .card__legend {
-        
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -48,28 +45,27 @@
             font-size: 1.4rem;
         }
         & .fa-solid {
-            padding: 10px;
             opacity: 0;
-            bottom: 15px;
-            right: 0.5px;
             background-image: linear-gradient($primaire, $secondaire);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            transform: scale(0.5);
-            transition: transform, .4s;
+            transform: scale(0);
+            transition: all, 1s; 
+        }
+        & .fa-regular {
+            transform: scale(1);
+            transition: all 1s;
             &:hover {
-                transform: scale(1.1);
+                transform: scale(0);
+                opacity: 0;
+            }
+            &:hover + .fa-solid{
+                transform: scale(1.1);   
                 opacity: 1;
             }
         }
-        & .fa-regular {
-            transform: scale(.89);
-            transition: transform 4s;
-            &:hover {
-                transform: scale(0);
-            }
-        }
+        
         & .legend__name, .legend__location  {
             padding-left: 10px;
             display: flex;

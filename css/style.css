@@ -186,27 +186,25 @@ body {
   font-size: 1.4rem;
 }
 .card .card__legend .fa-solid {
-  padding: 10px;
   opacity: 0;
-  bottom: 15px;
-  right: 0.5px;
   background-image: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transform: scale(0.5);
-  transition: transform, 0.4s;
-}
-.card .card__legend .fa-solid:hover {
-  transform: scale(1.1);
-  opacity: 1;
+  transform: scale(0);
+  transition: all, 1s;
 }
 .card .card__legend .fa-regular {
-  transform: scale(0.89);
-  transition: transform 4s;
+  transform: scale(1);
+  transition: all 1s;
 }
 .card .card__legend .fa-regular:hover {
   transform: scale(0);
+  opacity: 0;
+}
+.card .card__legend .fa-regular:hover + .fa-solid {
+  transform: scale(1.1);
+  opacity: 1;
 }
 .card .card__legend .legend__name, .card .card__legend .legend__location {
   padding-left: 10px;
