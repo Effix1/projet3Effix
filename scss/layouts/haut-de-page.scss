@@ -15,12 +15,6 @@
     }    
     & button {
         @include shadow;
-        background-image: linear-gradient($secondaire, $primaire);
-        border: none;
-        border-radius: 2rem;
-        padding: 15px;
-        color: white;
-        font-size: 0.9rem;
-        font-weight: 300;
+        @include bouton;
     }
 }

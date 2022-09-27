@@ -1,0 +1,102 @@
+.header__menu {
+    position: relative;
+    box-shadow: none;
+    & .fa-arrow-left {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+        color: black;
+        font-size: 1.3rem;
+        
+    }
+}
+
+.main__menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.main__card--color {
+    background-color: $back-color;
+    
+}
+.card__a {
+    display: flex;
+    flex-direction: column;
+    .head__card {
+        display: flex;
+        flex-direction: column;
+    }
+    .card__a__pic {
+        object-fit: cover;
+        height: 220px;
+    }
+}
+.main__card__title {
+
+    position: relative;
+    bottom: 35px;
+    overflow: hidden;
+    background-color: $back-color;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: left;
+    padding: 0 10px 0 10px;
+    
+    & h2 {
+        font-family: 'shrikhand' , cursive;
+    
+    }
+    & .card__heart {
+        border: 1px solid;
+        position: absolute;
+        right: 20px;
+        top: 22px;
+        font-size: 1.5rem;
+    }
+}
+
+.main__card__slot {
+    background-color: $back-color;
+   
+    & h4 {
+        margin: auto;
+        padding: 15px;
+    }
+}
+.slot__list {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0 0 20px 0;
+    
+    
+    & .list__item {
+        display: flex;
+        position: relative;
+        padding-left: 15px;
+        border-radius: 15px;
+        background-color: white;
+        & .item__legend {
+            
+            & h3 {
+                margin: 10px 0 0 0;
+            }
+            & p {
+                margin: 10px 0         à;
+            }
+        }
+        & .item__price {
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
+            font-weight: bold;
+        }
+    } 
+    
+   
+}
+

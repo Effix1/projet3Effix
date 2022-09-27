@@ -9,3 +9,12 @@
     object-fit: contain;
    
 }
+@mixin bouton {
+    background-image: linear-gradient($secondaire, $primaire);
+    border: none;
+    border-radius: 2rem;
+    padding: 15px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}

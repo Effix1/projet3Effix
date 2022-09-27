@@ -29,6 +29,8 @@
     border-radius: 2rem;
     overflow: hidden;
     @include shadow;
+    text-decoration: none;
+    color: black;
     & .card__img {
         object-fit: cover;
         height: 175px;

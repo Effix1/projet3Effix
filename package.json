@@ -1,11 +1,19 @@
 {
-  "name": "scss",
+  "name": "projet3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./scss/style.scss:./css/style.css"
+    "sass": "sass --watch ./scss/style.scss:./css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Effix1/projet3Effix.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Effix1/projet3Effix/issues"
+  },
+  "homepage": "https://github.com/Effix1/projet3Effix#readme"
 }

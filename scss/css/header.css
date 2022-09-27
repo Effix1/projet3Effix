@@ -1,0 +1,10 @@
+header {
+  box-shadow: 0px 5px 5px #cfcfcf;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  position: relative;
+}
+header h1 {
+  margin: 0;
+  font-family: "shrikhand", cursive;
+}/*# sourceMappingURL=header.css.map */
