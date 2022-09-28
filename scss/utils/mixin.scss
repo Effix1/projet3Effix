@@ -1,5 +1,5 @@
-@mixin shadow {
-    box-shadow: 0px 5px 5px #cfcfcf;
+@mixin shadow($color: $shadow-color) {
+    box-shadow: 0px 5px 5px $color;
 }
 @mixin police__h3 {
     font-weight: 700, bolder;
@@ -10,11 +10,18 @@
    
 }
 @mixin bouton {
-    background-image: linear-gradient($secondaire, $primaire);
+    @include shadow (darken($shadow-color, 20%));
+    opacity: 1;
     border: none;
     border-radius: 2rem;
     padding: 15px;
     color: white;
     font-size: 1rem;
     font-weight: 600;
+    transition: all .4s;
+    background-image: linear-gradient($secondaire, $primaire);
+    &:hover {
+        opacity: .9;
+        @include shadow;  
+    }
 }

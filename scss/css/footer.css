@@ -5,7 +5,6 @@ footer {
 }
 
 .foot {
-  padding-left: 40px;
   display: flex;
   flex-direction: column;
   width: 50vh;
