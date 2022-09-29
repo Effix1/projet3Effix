@@ -1,13 +1,13 @@
 @mixin shadow($color: $shadow-color) {
     box-shadow: 0px 5px 5px $color;
 }
+@mixin main__font {
+    font-family: 'shrikhand' , cursive;
+    font-weight: normal;
+}
 @mixin police__h3 {
     font-weight: 700, bolder;
     font-size: 1.4rem;
-}
-@mixin card__mobil {
-    object-fit: contain;
-   
 }
 @mixin bouton {
     @include shadow (darken($shadow-color, 20%));

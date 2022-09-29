@@ -13,7 +13,7 @@ footer {
         letter-spacing: 1px;
         padding-top: 25px;
         margin: 0;
-        font-family: 'shrikhand' , cursive;
+        @include main__font;
         color: white;
         justify-content: flex-end; 
     }

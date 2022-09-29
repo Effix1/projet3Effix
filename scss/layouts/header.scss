@@ -6,6 +6,6 @@ header{
     position: relative; 
     & h1 {
         margin: 0;
-        font-family: 'shrikhand' , cursive;
+        @include main__font;
     }
 }
