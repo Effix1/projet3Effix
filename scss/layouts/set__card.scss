@@ -37,37 +37,43 @@
         width: 100%;
     }
     & .card__legend {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        & .fa-heart {
+        
+        & .fa-heart__reg {
+            @include center;
             position: absolute;
             bottom: 25px;
             right: 10px;
-            font-size: 1.4rem;
-        }
-        & .fa-solid {
-            opacity: 0;
-            background-image: linear-gradient($primaire, $secondaire);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            transform: scale(0);
-            transition: all, 1s; 
-        }
-        & .fa-regular {
-            transform: scale(1);
-            transition: all 1s;
-            &:hover {
-                transform: scale(0);
-                opacity: 0;
+            height: 40px;
+            width: 40px;
+            &::before {
+                @include heart($font-weight:400);
+                transform: scale(1);
+                transition:all 1s; 
+                position: absolute;
             }
-            &:hover + .fa-solid{
-                transform: scale(1.1);   
+            &::after {
+                position: absolute;
+                @include heart;
+                transform: scale(.1);
+                transition:all 1s;
+                opacity: 0;
+                @include bg__clip;
+            }
+            &:hover::after {
+                transition: all 1s;
+                transform: scale(1);
                 opacity: 1;
             }
+            &:hover::before {
+                transform: scale(.6);
+                opacity: 0;
+            }
         }
-        
+     
         & .legend__name, .legend__location  {
             padding-left: 10px;
             display: flex;

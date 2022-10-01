@@ -25,3 +25,25 @@
         @include shadow;  
     }
 }
+@mixin center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@mixin bg__clip {
+    background-image: linear-gradient($primaire, $secondaire);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@mixin heart($font-weight:800) {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f004";
+    font-weight: $font-weight;
+}

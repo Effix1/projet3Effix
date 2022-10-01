@@ -33,7 +33,6 @@
     }
 }
 .main__card__title {
-
     position: relative;
     bottom: 35px;
     overflow: hidden;
@@ -42,6 +41,32 @@
     display: flex;
     justify-content: left;
     padding: 0 10px 0 10px;
+    &::before {
+        @include heart($font-weight:400);
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        font-size: 1.4rem;
+        transition: all 1s;
+    }
+    &::after {
+        @include heart;
+        @include bg__clip;
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        font-size: 1.4rem;
+        opacity: 1;
+        transform: scale(0);
+        transition: all .9s;
+    }
+    &:hover::after {
+        transform: scale(1.1);
+    }
+    &:hover::before {
+        transform: scale(.6);
+        opacity: 0;
+    }
     
     & h2 {
         @include main__font;
