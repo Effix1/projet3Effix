@@ -87,16 +87,28 @@
     align-items: center;
     
     & h4 {
+        position: relative;
         padding: 15px;
         text-transform: uppercase;
         width: 90%;
         padding-left: 0;
+        font-weight: 400;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 36px;
+            left: 1px;
+            height: 3px;
+            width:37px;
+            background-color: $tertiaire;
+            
+        }
     }
 }
 .slot__list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
     list-style: none;
     padding: 0 0 20px 0;
@@ -104,28 +116,45 @@
     & .list__item {
         @include shadow;
         display: flex;
+        justify-content: space-between;
         position: relative;
         padding-left: 15px;
         border-radius: 15px;
         background-color: white;
+        overflow: hidden;
+        height: 70px;
         & .item__legend {
-            
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
             & h3 {
                 margin: 10px 0 0 0;
             }
             & p {
-                margin: 10px 0         à;
+                margin: 10px 0;
+                display: flex;
+                flex-wrap: nowrap;
+                
+                overflow: hidden;  
             }
         }
         & .item__price {
-            position: absolute;
-            right: 20px;
-            bottom: 15px;
-            font-weight: bold;
+            background-color: white;
+            @include center(flex-end);
+            border: 1px solid;
+            font-weight:475;
+            font-size: .9rem;
+            padding: 0 20px 11px 0;
         }
-    } 
-    
-   
+        & .item__price__checked {
+            display: flex;
+        }
+        & .item__checked {
+            border: 1px solid;
+            width: 15%;
+            @include center;
+        }
+    }  
 }
 .command {
   display: flex;

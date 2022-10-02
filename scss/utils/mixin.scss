@@ -25,11 +25,11 @@
         @include shadow;  
     }
 }
-@mixin center {
+@mixin center($align-items: center) {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: $align-items;
 }
 @mixin bg__clip {
     background-image: linear-gradient($primaire, $secondaire);
