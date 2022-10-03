@@ -1,0 +1,65 @@
+.slot__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+    padding: 0 0 20px 0;
+    width: 95%;
+    & .list__item {
+        @include shadow;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-left: 15px;
+        border-radius: 15px;
+        background-color: white;
+        overflow: hidden;
+        height: 65px;
+        &:hover .item__price__checked{
+            transform: translate(-48px);
+            transition: all 1s 0s;
+            
+        }
+        &:hover .item__price__checked .item__checked .fa-circle-check {
+            transform: rotate(0deg);
+        }
+        & .item__legend {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+           
+            & h3 {
+                margin: 10px 0 0 0;
+            }
+            & p {
+                margin: 10px 0;
+                text-overflow: ellipsis;
+            }
+        }
+        & .item__price__checked {
+            display: flex;
+            transition: all 1s;
+        }
+        & .item__price {
+            background-color: white;
+            @include center(flex-end);
+            font-weight:475;
+            font-size: .9rem;
+            padding: 0 20px 11px 0;
+        }
+        & .item__checked {
+            padding: 0 15px 0 15px;
+            @include center;
+            margin-right: -48px;
+            background-color: $tertiaire;
+            transition: all 1s ease-out;
+            
+            & .fa-circle-check {
+                color: white;
+                transform: rotate(180deg);
+                transition: all 1s .2s;
+            }
+        }
+    }  
+}

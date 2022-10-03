@@ -1,0 +1,21 @@
+.main__menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.main__card--color {
+    background-color: $back-color;
+    
+}
+.card__a {
+    display: flex;
+    flex-direction: column;
+    .head__card {
+        display: flex;
+        flex-direction: column;
+    }
+    .card__a__pic {
+        object-fit: cover;
+        height: 220px;
+    }
+}
