@@ -1,18 +1,18 @@
 .main__card__title {
     position: relative;
-    bottom: 39px;
+    bottom: 36px;
     overflow: hidden;
     background-color: $back-color;
     border-radius: 5rem;
     display: flex;
     justify-content: left;
-    padding: 0 10px 0 10px;
+    padding: 0 10px 10px 10px;
     
     &::before {
         @include heart($font-weight:400);
         position: absolute;
         right: 24px;
-        top: 24px;
+        top: 20px;
         font-size: 1.4rem;
         transition: all 1s;
     }
@@ -21,7 +21,7 @@
         @include bg__clip;
         position: absolute;
         right: 24px;
-        top: 24px;
+        top: 23px;
         font-size: 1.4rem;
         opacity: 1;
         transform: scale(0);
@@ -37,6 +37,7 @@
     
     & h2 {
         @include main__font;
+        letter-spacing: .5px;
         
     }
     & .card__heart {

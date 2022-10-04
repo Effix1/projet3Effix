@@ -4,7 +4,8 @@
     justify-content: space-between;
     gap: 20px;
     list-style: none;
-    padding: 0 0 20px 0;
+    padding: 0;
+    margin-bottom: 2;
     width: 95%;
     & .list__item {
         @include shadow;
@@ -17,7 +18,7 @@
         overflow: hidden;
         height: 65px;
         &:hover .item__price__checked{
-            transform: translate(-48px);
+            transform: translate(-62px);
             transition: all 1s 0s;
             
         }
@@ -35,6 +36,7 @@
             & p {
                 margin: 10px 0;
                 text-overflow: ellipsis;
+                flex-wrap: nowrap;
             }
         }
         & .item__price__checked {
@@ -49,9 +51,9 @@
             padding: 0 20px 11px 0;
         }
         & .item__checked {
-            padding: 0 15px 0 15px;
+            padding: 0 20px 0 20px;
             @include center;
-            margin-right: -48px;
+            margin-right: -63px;
             background-color: $tertiaire;
             transition: all 1s ease-out;
             
@@ -59,6 +61,7 @@
                 color: white;
                 transform: rotate(180deg);
                 transition: all 1s .2s;
+                font-size: 1.4rem;
             }
         }
     }  

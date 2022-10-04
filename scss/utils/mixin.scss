@@ -9,12 +9,12 @@
     font-weight: 700, bolder;
     font-size: 1.4rem;
 }
-@mixin bouton {
+@mixin bouton($padding:15px 15px 15px 15px) {
     @include shadow (darken($shadow-color, 20%));
     opacity: 1;
     border: none;
     border-radius: 2rem;
-    padding: 15px;
+    padding: $padding;
     color: white;
     font-size: 1rem;
     font-weight: 600;
