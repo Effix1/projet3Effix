@@ -1,0 +1,55 @@
+@media screen and (min-width: 768px) {
+    button {
+        width: 60%;
+    }
+    .fonction__title {
+        text-align: center;
+    }
+    .fonction .fonction__pic {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 95%;
+        & .fa-menu {
+            display: none;
+        }
+        
+        & .fonction__pic__list {
+            display: flex;
+            white-space: nowrap;
+            justify-content: center;
+            text-overflow: ellipsis;
+            flex-shrink: 1;
+            text-align: center;
+            width: 32%;
+            border: 2px solid white;
+            padding: 25px 0;
+        }
+    }
+    .section__a__title {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .set__card {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+        
+        
+        & .card {
+            flex-basis:47% ;
+        }
+        
+    }
+    .foot {
+        display: flex;
+        align-items: center;
+        & .foot__title {
+            align-self: auto;
+        }
+    }
+    
+}

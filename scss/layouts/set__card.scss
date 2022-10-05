@@ -1,3 +1,18 @@
+.section__a {
+    display: flex;
+    flex-direction: column;
+    background-color: $back-color;
+    padding-top: 20px;
+    width: 100%;
+    & .section__a__title {
+        align-self: center;
+        display: inline;
+        width: 80%;
+        @include police__h3;
+        margin:22.4px 0px 0px;
+    }
+
+}
 .set__card {
     position: relative;
     background-color: $back-color;
@@ -7,11 +22,7 @@
     gap: 20px;
     text-align: left;
     padding: 20px 0 75px;
-    & h3 {
-        width: 80%;
-        @include police__h3;
-        margin:22.4px 0px 0px;
-    }
+  
     & .new::before {
         padding: 5px;
         content: "Nouveau";

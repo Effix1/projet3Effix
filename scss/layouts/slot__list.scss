@@ -19,8 +19,7 @@
         height: 65px;
         &:hover .item__price__checked{
             transform: translate(-62px);
-            transition: all 1s 0s;
-            
+            transition: all 1s 0s;   
         }
         &:hover .item__price__checked .item__checked .fa-circle-check {
             transform: rotate(0deg);
@@ -29,7 +28,6 @@
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
-           
             & h3 {
                 margin: 10px 0 0 0;
             }
@@ -56,7 +54,6 @@
             margin-right: -63px;
             background-color: $tertiaire;
             transition: all 1s ease-out;
-            
             & .fa-circle-check {
                 color: white;
                 transform: rotate(180deg);
