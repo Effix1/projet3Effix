@@ -1,13 +1,12 @@
 .main__card__title {
     position: relative;
-    bottom: 36px;
+    bottom: 50px;
     overflow: hidden;
     background-color: $back-color;
     border-radius: 5rem;
     display: flex;
     justify-content: left;
-    padding: 0 10px 10px 10px;
-    
+    padding: 0 0px 10px 0px;
     &::before {
         @include heart($font-weight:400);
         position: absolute;
@@ -38,13 +37,13 @@
     & h2 {
         @include main__font;
         letter-spacing: .5px;
-        
+        padding: 5px 0 5px 20px;
     }
     & .card__heart {
-        border: 1px solid;
         position: absolute;
         right: 20px;
-        top: 22px;
+        top: 36px;
         font-size: 1.5rem;
+        background-color: red;
     }
 }
