@@ -16,24 +16,30 @@
         border-radius: 15px;
         background-color: white;
         overflow: hidden;
-        height: 65px;
+        height: auto;
         &:hover .item__price__checked{
-            transform: translate(-62px);
+            margin-right: 62px;
             transition: all 1s 0s;   
         }
         &:hover .item__price__checked .item__checked .fa-circle-check {
             transform: rotate(0deg);
         }
         & .item__legend {
+            overflow: hidden;
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
             & h3 {
                 margin: 10px 0 0 0;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
             & p {
                 margin: 10px 0;
                 text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
                 flex-wrap: nowrap;
             }
         }
