@@ -8,9 +8,6 @@
     justify-content: left;
     padding: 0 0px 10px 0px;
     & .heart__menu {
-        background-color: 1px solid;
-        height: 30px;
-        width: 30px;
         &::before {
             @include heart($font-weight:400);
             position: absolute;
@@ -42,12 +39,5 @@
         @include main__font;
         letter-spacing: .5px;
         padding: 5px 0 5px 20px;
-    }
-    & .card__heart {
-        position: absolute;
-        right: 20px;
-        top: 36px;
-        font-size: 1.5rem;
-        background-color: red;
     }
 }
