@@ -5,3 +5,39 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+.loader {
+    position:fixed;
+    inset: 0;
+    background-color: $back-color;
+    opacity: 0;
+    z-index: -1;
+    animation: loader 3s;
+    transform-origin: 10px 10px;
+}
+@keyframes loader {
+    0% {
+        transform: scale(1);
+        opacity: .9;
+        z-index: 1;
+    }
+    80% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        opacity: .9;
+        z-index: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
