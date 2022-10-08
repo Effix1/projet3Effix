@@ -2,6 +2,16 @@
 @import "./main__menu";
 @import "./main__card__menu";
 @import "./main__card__slot";
-@import "./slot__list";
+@import "./menu__slot__list";
 @import "./command__menu";
+
+
+@keyframes bars {
+    0% {
+        transform:scaleY(.5)
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
 

@@ -1,6 +1,51 @@
 @media screen and (min-width: 992px) {
-    body {
-        display: flex;
-        flex-direction: row;
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    & header {
+      height: 130px;
+      @include center;
+      & h1 {
+        font-size: 7rem;
+      }
     }
+  }
+  main {
+    & .haut-de-page {
+      max-height: 200px;
+      & p {
+        font-size: 1.3rem;
+      }
+      & button {
+        width: 30%;
+        font-size: 1.2rem;
+      }
+    }
+    & .fonction {
+      max-height: 200px;
+    }
+  }
+  .main__card__slot__desk {
+    display: flex;
+    justify-content: center;
+    & .main__card__slot {
+        width: 30%;
+      & .command {
+        min-width: 200px;
+      }
+    }
+  }
+  .break__width__desk {
+    display: none;
+  }
+  .section__a {
+    & .set__card {
+      justify-content: space-around;
+      gap: 10px;
+      & .card {
+        max-width: 20%;
+      }
+    }
+  }
 }

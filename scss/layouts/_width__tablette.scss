@@ -23,7 +23,6 @@
             flex-shrink: 1;
             text-align: center;
             width: 32%;
-            border: 2px solid white;
             padding: 25px 0;
         }
     }
@@ -52,4 +51,7 @@
         }
     }
     
+}
+.command {
+    width: 45%;
 }
