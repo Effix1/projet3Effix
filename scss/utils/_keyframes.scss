@@ -1,16 +1,28 @@
-&::after {
-    content: "...";
-    
-    @include center;
-    flex-direction: row;
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-    position: fixed;
-    inset: 10px;
-    background-color: $secondaire;
-    border-radius: 5rem;
-    //box-shadow: 0 0 13px $secondaire;
+@keyframes cascade {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes loader {
+    0% {
+        rotate: 0deg;
+        transform: scale(1);
+        opacity: .9;
+        z-index: 1;
+    }
+    80% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        opacity: .9;
+        z-index: 1;
+    }
 }
 
 
