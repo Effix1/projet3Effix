@@ -1,4 +1,17 @@
-
+&::after {
+    content: "...";
+    
+    @include center;
+    flex-direction: row;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    position: fixed;
+    inset: 10px;
+    background-color: $secondaire;
+    border-radius: 5rem;
+    //box-shadow: 0 0 13px $secondaire;
+}
 
 
 
