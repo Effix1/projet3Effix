@@ -10,7 +10,6 @@
 }
 @keyframes loader {
     0% {
-        rotate: 0deg;
         transform: scale(1);
         opacity: .9;
         z-index: 1;
@@ -22,6 +21,17 @@
         transform: scale(0);
         opacity: .9;
         z-index: 1;
+    }
+}
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(720deg*2);
     }
 }
 

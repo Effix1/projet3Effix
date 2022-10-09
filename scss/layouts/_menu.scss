@@ -6,12 +6,3 @@
 @import "./command__menu";
 
 
-@keyframes bars {
-    0% {
-        transform:scaleY(.5)
-    }
-    100% {
-        transform: scaleY(1);
-    }
-}
-
