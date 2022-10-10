@@ -16,6 +16,7 @@
       max-height: 200px;
       & p {
         font-size: 1.3rem;
+        margin-bottom: 17px;
       }
       & button {
         width: 30%;
@@ -32,7 +33,7 @@
     & .main__card__slot {
         width: 30%;
       & .command {
-        min-width: 200px;
+        width: 100%;
       }
     }
   }
