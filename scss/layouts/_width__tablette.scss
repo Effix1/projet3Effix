@@ -12,18 +12,18 @@
         flex-wrap: nowrap;
         width: 95%;
         & .fa-menu {
-            display: none;
+            left: 37px;
         }
         
         & .fonction__pic__list {
             display: flex;
             white-space: nowrap;
-            justify-content: center;
+            justify-content: right;
             text-overflow: ellipsis;
             flex-shrink: 1;
             text-align: center;
             width: 32%;
-            padding: 25px 0;
+            padding: 25px 2% 25px 0;
         }
     }
     .section__a__title {

@@ -7,7 +7,7 @@
       height: 130px;
       @include center;
       & h1 {
-        font-size: 7rem;
+        font-size: 6rem;
       }
     }
   }
@@ -25,6 +25,12 @@
     }
     & .fonction {
       max-height: 200px;
+      & .fonction__pic {
+        & .fonction__pic__list {
+          justify-content: center;
+        }
+      }
+
     }
   }
   .main__card__slot__desk {

@@ -17,7 +17,7 @@
         background-color: white;
         overflow: hidden;
         height: auto;
-        animation: cascade 2s ease-in-out;
+        animation: cascade .7s ease-in-out;
         animation-fill-mode: both;
         @for $i from 1 through 10 {
             &--#{$i} {
