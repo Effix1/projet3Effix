@@ -1,3 +1,4 @@
+@import "./variables";
 @keyframes cascade {
     0% {
         transform: translateY(10px);
@@ -32,6 +33,38 @@
     }
     100% {
         transform: rotate(720deg*2);
+    }
+}
+@keyframes letter__color {
+    0% {
+        opacity: .5;
+        color:$tertiaire;
+        text-shadow: 0 0 10px $primaire;
+    }
+    20% {
+        opacity: 0.2;
+        color: $primaire;
+        text-shadow: 0 0 5px $secondaire;
+    }
+    40% {
+        opacity: 1;
+        color: $secondaire;
+        text-shadow: 0 0 10px $tertiaire;
+    }
+    60% {
+        opacity: 0.2;
+        color: $tertiaire;
+        text-shadow: 0 0 5px $primaire;
+    }
+    80% {
+        opacity: 1;
+        color: $primaire;
+        text-shadow: 0 0 10px $secondaire;
+    }
+    100% {
+        opacity: 0.2;
+        color: $secondaire;
+        text-shadow: 0 0 5px $tertiaire;
     }
 }
 
